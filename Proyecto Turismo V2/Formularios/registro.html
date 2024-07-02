@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        /* Aquí puedes agregar tu estilo CSS */
+        .welcome_container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .btn_container {
+            margin-top: 10px;
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .btn_seguir {
+            text-decoration: none;
+            color: #ccc;
+            background-color: black;
+            font-size: medium;
+        }
+        .seguir {
+            background-color: black;
+            padding: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="welcome_container">
+        <h2>Bienvenido</h2>
+        <p id="welcomeMessage"></p>
+    </div>
+
+    <div class="btn_container">
+        <button class="seguir"> <a class="btn_seguir" href="../Turismo/pag_principal.html"> Seguir </a></button>
+    </div>
+
+    <script>
+        // Obtener la información del usuario desde LocalStorage
+        var username = localStorage.getItem('username');
+
+        // Mostrar un mensaje de bienvenida
+        if (username) {
+            document.getElementById('welcomeMessage').textContent = 'Bienvenido, ' + username + '!';
+        } else {
+            document.getElementById('welcomeMessage').textContent = 'No se ha encontrado información de inicio de sesión.';
+        }
+    </script>
+</body>
+</html>
+

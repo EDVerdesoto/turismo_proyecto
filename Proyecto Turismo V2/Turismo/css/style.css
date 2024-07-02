@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOR HEADER STUFF */
+
+#mainHeader{
+    background-color: hsl(183, 40%, 72%);
+    border-bottom: 1px solid #fff;
+}
+
+#nav{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+#leftNav{
+    width: 45%;
+}
+
+#rightNav{
+    width: 55%;
+}
+
+.ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logoItem{
+    width: 12%;
+    min-width: 50px;
+    cursor: pointer; 
+}
+
+.item{
+    margin: 10px;
+}
+
+#logoImg{
+    width: 90%;
+    height: 90%;
+    min-width: 50px; 
+}
+
+#mainHeader a{  
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+#mainHeader a:hover{
+    color: hsl(185, 59%, 17%);
+    transition: 0.5s;
+    font-size: 18px;
+}
+
+
+/* FOR IMAGE SECTION */
+#general-message::before{
+    content: "";
+    position: absolute;
+    filter: blur(8px); 
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    background-image:  linear-gradient(135deg, rgba(134, 210, 210, 0.82) 5%, rgba(32, 32, 32, 0.14) 70%), url('/Turismo/images/TurismoImagen.webp');
+    background-position: center;
+    background-size: auto, cover;
+    align-content: center;
+    
+}
+
+/* Mensajes iniciales */
+.msg_general{
+    
+    width: 100%;
+    height: 50%;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.msg{
+    color: #fff;
+    margin-bottom: 14px;
+    font-size: 50px;
+    line-height: 51px;
+    letter-spacing: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.mensaje {
+    margin: 1cm;
+    padding: 1cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    text-align: center;
+    margin: 1em;
+    color: #fff;
+    justify-content: center;
+    font-size: larger;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btnLast {
+    background-color: hsl(185, 59%, 17%);
+    text-align: center;
+    color: white;
+    margin: 1em;
+    padding: 0.5em 2em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btnLast:hover{
+    color: hsl(185, 47%, 54%);
+    transition: 0.5s;
+    font-size: 25px;
+}
+
+/* FOR INTERESTING TOPICS */
+
+.sect_destino {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(183, 40%, 72%);
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+}
+
+.divDestinos {
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ul_destinos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.destinos{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.destinos a{  
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.destinos a:hover{
+    color: hsl(185, 59%, 17%);
+    transition: 0.5s;
+    border-bottom: 1px solid #437e7f;
+    font-size: 30px;
+}
+
+
+/* Seccion principal */
+.main_section {
+    width: 100%;
+    background-color: rgb(18, 65, 69);
+    text-align: center;
+}
+
+
+/* Imagenes Feature */
+.featured_posts {
+    margin: 1%;
+    max-width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+}
+
+.featured_title {
+    margin: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.box_feat_galery_1 {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: flex-end;
+    border-collapse: collapse;
+    border: 1px solid #0a0b09;
+    margin: 1%;
+    border-radius: 3px;
+    overflow: visible;
+    background-image: url("https://media.primicias.ec/2023/11/21161903/Ecuador-211123.jpg");
+    background-size: cover;
+    background-position: center;  
+}
+
+.box_feat_galery_2 {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: flex-end;
+    border-collapse: collapse;
+    border: 1px solid #0a0b09;
+    margin: 1%;
+    border-radius: 3px;
+    overflow: visible;
+    background-image: url("https://media.primicias.ec/2023/11/21161903/Ecuador-211123.jpg"); 
+    background-size: cover;
+    background-position: center;  
+}
+
+.bx_title_ft {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 6px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bx_description_ft {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* -------------------------------------------- */
+/* Most recent */
+.title_recent {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 1%;
+    color: blue;
+}
+
+.article{
+    max-width: 100%;
+    height: auto;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 0;  
+}
+
+.galery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    gap: 0.2rem;
+    margin: 20px;
+}
+.box-galery{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px #0a0b09;
+    padding: 1.5%;
+}
+
+.box-img{
+
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+/* Footer */
+.footer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_title { 
+    color: darkgray;
+    margin: 15px;
+    text-align: center;
+}
+
+.footer_menu{
+    background-color: hsl(183, 40%, 72%);;
+}
+
+.footer a{  
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: hsl(185, 59%, 17%);
+    transition: 0.5s;
+    font-size: 18px;
+}

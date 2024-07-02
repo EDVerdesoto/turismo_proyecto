@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Diseño del formulario -->
+    <form form id="loginForm" action="Formularios/registro.html" method="get">
+        <div class="login_container">
+            <h2 id="Titulo"> REGISTRO </h2>
+            <div class="form_group_nombres">
+                <div class="box">
+                    <label for="nombre"><b>Nombre</b></label>
+                    <input type="text" name="nombre" class="input_box" id="nombre_1" pattern="[A-Za-zÀ-ÿ\s]{4,20}" 
+                    title="El nombre solo puede contener letras y espacios, máximo 20 caracteres" required>
+                </div>
+            
+                <div class="box">
+                    <label for="apellido"><b>Apellido</b></label>
+                    <input type="text" name="apellido" class="input_box" pattern="[A-Za-zÀ-ÿ\s]{4,20}" 
+                    title="El apellido solo puede contener letras y espacios, máximo 20 caracteres" required>
+                </div>
+            
+                <div class="box">
+                    <label for="segundo_nombre"><b>Segundo Nombre</b></label>
+                    <input type="text" name="segundo_nombre" class="input_box" pattern="[A-Za-zÀ-ÿ\s]{4,20}" 
+                    title="El segundo nombre solo puede contener letras y espacios, máximo 20 caracteres" required>
+                </div>
+            
+                <div class="box">
+                    <label for="segundo_apellido"><b>Segundo Apellido</b></label>
+                    <input type="text" name="segundo_apellido" class="input_box" pattern="[A-Za-zÀ-ÿ\s]{4,20}" 
+                    title="El segundo apellido solo puede contener letras y espacios, máximo 20 caracteres" required>
+                </div>
+            </div>
+            
+            <div class="form_group">
+                <label for="email"><b>Email</b></label>
+                <input type="email" name="email" class="input_box" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                title="Ingrese una dirección de correo electrónico válida" required>
+            </div>
+            
+            <div class="form_group">
+                <div class="documento">
+                    <label for="tipo_documento"><b>Seleccione el tipo de documento</b></label>
+                    <select name="tipo_documento" class="select_box">
+                        <option value="opcion1">Cédula</option>
+                        <option value="opcion2">RUC</option>
+                        <option value="opcion3">Pasaporte</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="documento"><b>Número de documento</b></label>
+                    <input type="text" name="documento" class="input_box" pattern="\d{7,12}" 
+                    title="El documento debe contener entre 7 y 12 dígitos" required>
+                </div>
+            </div>
+
+            <div class="form_group">  
+                <div class="password">
+                    <label for="password"><b>Contraseña</b></label>
+                    <input type="password" name="password" class="input_box" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}" 
+                    title="La contraseña debe tener al menos 6 caracteres, llevar una letra mayúscula y un número" 
+                    placeholder="Contraseña" required>
+                    <div id="passwordFeedback"></div>
+                </div>
+                
+                <div class="password">
+                    <label for="conf_password"><b>Confirmar Contraseña</b></label>
+                    <input type="password" name="conf_password" class="input_box" id="password_conf" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}" 
+                    title="La contraseña debe tener al menos 6 caracteres, llevar una letra mayúscula y un número" 
+                    placeholder="Confirmar Contraseña" required>
+                    <div id="password_conf_feedback"></div>
+                </div>
+            </div>
+
+            <div class="mapa">
+                <label for="direccion"> <b>Dirección</b> </label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8168901.67670425!2d-89.19596735543195!3d-1.3434900255586923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902387dda89a4bd5%3A0x9d76af04119c3702!2sEcuador!5e0!3m2!1sen!2sec!4v1717729102114!5m2!1sen!2sec" 
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="form_group">
+                <label for="telefono"><b>Teléfono</b></label>
+                <input type="text" name="telefono" class="input_box" pattern="\d{10}" 
+                title="El teléfono debe contener 10 dígitos" required>
+            </div>
+
+            <div class="form_group">
+                <div class="provincia">
+                    <label for="provincia"><b>Provincia:</b></label>
+                    <select name="provincia" class="select_box" aria-placeholder="Seleccione una provincia">
+                        <option value="azuay">Azuay</option>
+                        <option value="bolivar">Bolívar</option>
+                        <option value="carchi">Carchi</option>
+                        <option value="caniar">Cañar</option>
+                        <option value="chimborazo">Chimborazo</option>
+                        <option value="cotopaxi">Cotopaxi</option>
+                        <option value="el_oro">El Oro</option>
+                        <option value="esmeraldas">Esmeraldas</option>
+                        <option value="galapagos">Galápagos</option>
+                        <option value="guayas">Guayas</option>
+                        <option value="imbabura">Imbabura</option>
+                        <option value="loja">Loja</option>
+                        <option value="los_rios">Los Ríos</option>
+                        <option value="manabi">Manabí</option>
+                        <option value="morona_santiago">Morona Santiago</option>
+                        <option value="napo">Napo</option>
+                        <option value="orellana">Orellana</option>
+                        <option value="pastaza">Pastaza</option>
+                        <option value="pichincha">Pichincha</option>
+                        <option value="santa_elena">Santa Elena</option>
+                        <option value="santo_domingo">Santo Domingo de los Tsáchilas</option>
+                        <option value="sucumbios">Sucumbíos</option>
+                        <option value="tungurahua">Tungurahua</option>
+                        <option value="zamora_chinchipe">Zamora Chinchipe</option>
+                    </select>
+                </div>
+
+                <div class="ciudad">
+                    <label for="ciudad"><b>Ciudad:</b></label>
+                    <select name="ciudad" class="select_box" aria-placeholder="Seleccione una ciudad" required>
+                        <!-- Azuay -->
+                        <option value="cuenca">Cuenca</option>
+                        <option value="gualaceo">Gualaceo</option>
+                        
+                        <!-- Bolívar -->
+                        <option value="guaranda">Guaranda</option>
+                        
+                        <!-- Carchi -->
+                        <option value="tulcan">Tulcán</option>
+                        
+                        <!-- Cañar -->
+                        <option value="azogues">Azogues</option>
+                        
+                        <!-- Chimborazo -->
+                        <option value="riobamba">Riobamba</option>
+                        
+                        <!-- Cotopaxi -->
+                        <option value="latacunga">Latacunga</option>
+                        
+                        <!-- El Oro -->
+                        <option value="machala">Machala</option>
+                        
+                        <!-- Esmeraldas -->
+                        <option value="esmeraldas">Esmeraldas</option>
+                        
+                        <!-- Galápagos -->
+                        <option value="puerto_ayora">Puerto Ayora</option>
+                        
+                        <!-- Guayas -->
+                        <option value="guayaquil">Guayaquil</option>
+                        <option value="duran">Durán</option>
+                        
+                        <!-- Imbabura -->
+                        <option value="ibarra">Ibarra</option>
+                        
+                        <!-- Loja -->
+                        <option value="loja">Loja</option>
+                        
+                        <!-- Los Ríos -->
+                        <option value="babahoyo">Babahoyo</option>
+                        
+                        <!-- Manabí -->
+                        <option value="portoviejo">Portoviejo</option>
+                        <option value="manta">Manta</option>
+                        
+                        <!-- Morona Santiago -->
+                        <option value="macas">Macas</option>
+                        
+                        <!-- Napo -->
+                        <option value="tena">Tena</option>
+                        
+                        <!-- Orellana -->
+                        <option value="coca">Puerto Francisco de Orellana (El Coca)</option>
+                        
+                        <!-- Pastaza -->
+                        <option value="puyo">Puyo</option>
+                        
+                        <!-- Pichincha -->
+                        <option value="quito">Quito</option>
+                        <option value="cayambe">Cayambe</option>
+                        
+                        <!-- Santa Elena -->
+                        <option value="santa_elena">Santa Elena</option>
+                        
+                        <!-- Santo Domingo de los Tsáchilas -->
+                        <option value="santo_domingo">Santo Domingo</option>
+                        
+                        <!-- Sucumbíos -->
+                        <option value="nueva_loja">Nueva Loja (Lago Agrio)</option>
+                        
+                        <!-- Tungurahua -->
+                        <option value="ambato">Ambato</option>
+                        
+                        <!-- Zamora Chinchipe -->
+                        <option value="zamora">Zamora</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form_group">
+                <label for="genero"><b>Seleccione su género:</b></label>
+                <div class="botones_rol">    
+                    <label> <input type="radio" name="genero" class="genero_radio" required>Masculino</label>
+                    <label> <input type="radio" name="genero" class="genero_radio" required>Femenino</label>
+                    <label> <input type="radio" name="genero" class="genero_radio" required>Otro</label>
+                </div>
+            </div>
+
+            <div class="form_gruop_terminos">
+                <div class="acepta">
+                    <input type="checkbox" name="terminos" required>
+                    <label for="acepta"><b>Acepto términos y condiciones</b></label>
+                </div>
+                <div>
+                    <button type="button" class="btn_terminos">Términos y condiciones</button>
+                </div>
+            </div>
+
+            <div class="form_btn_register">
+                <button type="submit" id="btn_register">Registrarse</button>
+            </div>
+        </div>
+    </form>
+
+    
+    <!-- Script para mensaje de advertencia contraseña -->
+    <script>
+        var passwordInput = document.getElementById("password");
+        var passwordFeedback = document.getElementById("passwordFeedback");
+
+        passwordInput.addEventListener("input", function() {
+            var password = passwordInput.value.trim();
+
+            if (password.length > 10 || password.length < 6) {
+                passwordFeedback.textContent = "Escoja una contraseña entre 6 y 10 caracteres";
+                return;
+            }
+
+            if (!/(?=.*\d)/.test(password)) {
+                passwordFeedback.textContent = "La contraseña debe tener al menos un número";
+                return;
+            }
+
+            if (!/(?=.*[A-Z])/.test(password)) {
+                passwordFeedback.textContent = "La contraseña debe tener al menos una mayúscula"; 
+                return;
+            }
+
+            passwordFeedback.textContent = "";
+        });
+    </script>
+
+    <script>
+        document.getElementById('password_conf').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const password_confirm = document.getElementById('password_conf').value;
+            const password_confirm_feedback = document.getElementById('password_conf_feedback');
+
+            if (password !== password_confirm) {
+                password_confirm_feedback.textContent = 'Las contraseñas no coinciden.';
+            } else {
+                password_confirm_feedback.textContent = '';
+            }
+        });
+        
+    </script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            var username = document.getElementById('nombre_1').value;
+
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+
+            localStorage.setItem('username', username);
+
+            window.location.href = 'Formularios/registro.html';
+        });
+    </script>
+
+</body>
+</html>
