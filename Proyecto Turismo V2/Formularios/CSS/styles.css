@@ -2,22 +2,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #690dac;
     display: flex;
-    justify-content: center; /* Centrar de forma horizontal */
-    align-items: center; /* Centrar de forma vertical */
-    min-height: 100vh; /* Asegurar que la altura cubra toda la pantalla */
-    margin: 0;
+    justify-content: center; /*centrar de forma horizontal*/
+    align-items: center; /*centrar de forma vertical*/
+    height: auto;
 }
 
 .login_container {
     background-color: #fff;
-    padding: 22px; /* Espacio interior alrededor del contenido */
+    padding: 22px; /*espacio interior al rededor del contenido*/
+    padding-top: 20px;
     border-radius: 10px;
     width: 350px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Añadir sombra para un mejor aspecto */
+    height: 100%;
+    margin: 3%;
 }
 
-.login_container h2 {
+.login_container h2{
     margin-bottom: 5px;
 }
 
@@ -25,19 +26,18 @@ body {
     margin-bottom: 20px;
 }
 
-.form_group {
+.form_gruop {
     display: flex;
     flex-direction: column;
     text-align: justify;
-    margin-bottom: 15px; /* Ajustar margen inferior para separar grupos de formularios */
+    margin: auto;
 }
 
-.form_group input {
-    margin-top: 8px;
-    padding: 10px; /* Ajustar el padding para mayor espacio interno */
+.form_gruop input{
+    margin-top:8px ;
+    margin-bottom: 15px;
+    padding: 2%;
     border-radius: 5px;
-    border: 1px solid #ccc; /* Añadir borde para una mejor apariencia */
-    font-size: 1em; /* Asegurar que el texto dentro de los inputs sea legible */
 }
 
 .form_option {
@@ -45,90 +45,89 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0; /* Ajustar el margen superior e inferior */
+    margin: 1%;
 }
 
 .form_option label {
     font-size: 0.9em;
 }
 
-.forgot_password {
+.forgot_paswword {
     text-decoration: none;
     color: #680eac;
 }
 
-#btn_login {
+.btn_login {
     background-color: black;
     color: #fff;
-    border: none;
     border-radius: 8px;
-    padding: 12px; /* Ajustar el padding para mayor espacio interno */
+    padding: 2%;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 4.1%;
     font-size: 1.14em;
     cursor: pointer;
-    transition: background-color 0.3s; /* Añadir transición para un efecto más suave */
-}
-
-#btn_login:hover {
-    background-color: #333; /* Color de fondo al pasar el mouse */
 }
 
 #btn_register {
     background-color: #680eac;
     color: #fff;
-    border: none;
     border-radius: 8px;
-    padding: 12px; /* Ajustar el padding para mayor espacio interno */
+    padding: 2%;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 2.5%;
     font-size: 1.14em;
     cursor: pointer;
-    transition: background-color 0.3s; /* Añadir transición para un efecto más suave */
-}
-
-#btn_register:hover {
-    background-color: #5a0b99; /* Color de fondo al pasar el mouse */
 }
 
 .social_button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Añadir margen superior para separar del formulario */
 }
-
-.social_button a {
+.btn_google {
+    background-color: #dd4c39;
     color: #fff;
     border-radius: 8px;
-    padding: 12px; /* Ajustar el padding para mayor espacio interno */
+    padding: 2%;
     width: 100%;
     font-size: 1.14em;
     text-decoration: none;
-    text-align: center;
-    margin-bottom: 10px; /* Añadir margen inferior para separar los botones */
-    transition: background-color 0.3s; /* Añadir transición para un efecto más suave */
-}
-
-.social_button a:hover {
-    opacity: 0.9; /* Cambiar opacidad al pasar el mouse */
-}
-
-.btn_google {
-    background-color: #dd4c39;
 }
 
 .btn_facebook {
     background-color: #3b5999;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2%;
+    width: 100%;
+    margin-top: 2.5%;
+    font-size: 1.14em;
+    text-decoration: none;
 }
 
 .btn_twitter {
     background-color: #1fa1f2;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2%;
+    width: 100%;
+    margin-top: 2.5%;
+    font-size: 1.14em;
+    text-decoration: none;
+    margin-bottom: 4.2%;
 }
-
-#usernameFeedback, #passwordFeedback {
-    margin-bottom: 10px; /* Ajustar el margen inferior */
+ 
+#usernameFeedback {
+    margin-bottom: 2.5%;
     color: #dd4c39;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.85em; /* Ajustar el tamaño de la fuente */
+    font-size: 85%;
 }
+
+#passwordFeedback {
+    margin-bottom: 2.5%;
+    color: #dd4c39;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 85%;
+}
+

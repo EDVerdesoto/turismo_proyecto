@@ -4,56 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Turismo Ecuador</title>
 </head>
 <body>
     
-    <!-- Header -->
-    <header id="mainHeader">
-
-        <!--Menu-->
-        <nav id="nav">
-
-            <div id="leftNav">
-
-                <!--Unordered List-->
-                <ul class="ul">
-                    <!--Items-->
-                    <li id="logoItem" ><img src="images/TurismoImagen.webp" onclick="abrir_link()" alt="Turismo EC Logo" id="logoImg"></li> 
-                    <li class="item"><a href="#">Destacado</a></li>
-                    <li class="item"><a href="#">Regiones</a></li>
-                    <li class="item"><a href="#">Playas</a></li>
-                    <li class="item"><a href="#">Culturales</a></li>
-
-                </ul>
-
-                
-                <script>
-                    function abrir_link() {
-                        open("index.html" , target=_self);
-                    }
-                </script> 
-                
-            </div>
-
-            </div>
-
-            <div id="rightNav">
-                <!--Unordered List-->
-                <ul class="ul" style="justify-content: right;">
-                    <!--Items-->
-                    <li class="item"><a href="#">Contactos</a></li>
-                    <li class="item"><a href="#">Buscar</a></li>
-                    <li class="item"><p id="welcomeMessage"></p></li>
-                </ul>
-
-            </div>
-
-
-        </nav>
-
-    </header>
-
     <!-- Welcome Message -->
     <section id="general-message">
         
@@ -68,6 +23,114 @@
     </section>
 
     <!-- Menu destinos -->
+    
+    <header id="mainHeader">
+
+        <!--Menu-->
+        <nav id="nav">
+
+            <div class="leftNav">
+
+                <!--Unordered List-->
+                <ul class="ul">
+                    <!--Items-->
+                    <li class="logoItem" ><img src="images/TurismoImagen.webp" onclick="abrir_link()" alt="Turismo EC Logo" class="logoImg"></li> 
+                    <li class="item"><a href="#">Destacado</a></li>
+                    <li class="item"><a href="#">Regiones</a></li>
+                    <li class="item"><a href="#">Playas</a></li>
+                    <li class="item"><a href="#">Culturales</a></li>
+
+                </ul>
+                
+            </div>
+
+            <div class="rightNav">
+                <!--Unordered List-->
+                <ul class="ul" style="justify-content: right;">
+                    <!--Items-->
+
+                    <div class="search-bar">
+                        
+                        <div class="icon-container">
+                            <button class="search-button"><span class="material-icons"
+                                data-width="15px"
+                                data-height="15px">
+                                search </span></button>
+                        </div>
+
+                        <div class="text-area">
+                            <textarea name="search-text" id="search-text"
+                                    rows="1" aria-autocomplete="both"
+                                    role="combobox"></textarea>
+                        </div>
+
+                    </div>
+                    <li class="item"><p class="welcomeMessage"></p></li>
+                    <li class="logoItem"><img src="images/TurismoImagen.webp" alt="Foto de Perfil" class="logoImg"></li>
+                </ul>
+
+            </div>
+
+
+        </nav>
+
+        <div class="responsive-menu">
+
+            <div class="responsive-menu-container">
+                <!--Unordered List-->
+                <ul class="ul" style="justify-content: right;">
+                    <!--Items-->
+
+                    <div class="opened-menu-container">
+                        <button class="menu-button" onclick="desplegar_menu()"><span class="material-icons">
+                            menu </span></button>    
+                        <a href="" class="links-menu-responsivo">Destacado</a>
+                        <a href="" class="links-menu-responsivo">Regiones</a>
+                        <a href="" class="links-menu-responsivo">Playas</a>
+                        <a href="" class="links-menu-responsivo">Culturales</a>
+                    </div>           
+
+                </ul>
+
+            </div>
+        </div>
+
+        <nav class="nav-mobile">
+            <div class="leftNav">
+
+                <!--Unordered List-->
+                <ul class="ul">
+                    <!--Items-->
+                    <li class="logoItem" ><img src="images/TurismoImagen.webp" onclick="abrir_link()" alt="Turismo EC Logo" class="logoImg"></li>
+                </ul>
+                
+            </div>
+
+            <div class="rightNav">
+                <!--Unordered List-->
+                <ul class="ul" style="justify-content: right;">
+                    <!--Items-->
+
+                    <div class="icon-container">
+                        <button class="search-button"><span class="material-icons"
+                            data-width="15px"
+                            data-height="15px">
+                            search </span></button>
+                    </div>  
+
+                    <div class="menu-container">
+                        <button class="menu-button" onclick="desplegar_menu()"><span class="material-icons">
+                            menu </span></button>    
+                        </div>            
+                    <li class="item"><p class="welcomeMessage"></p></li>
+                    <li class="logoItem"><img src="images/TurismoImagen.webp" alt="Foto de Perfil" class="logoImg"></li>
+                </ul>
+
+            </div>
+        </nav>
+
+    </header>
+
     <section class="sect_destino">
 
 
@@ -76,10 +139,10 @@
             <nav class="menu_destinos">
                 
                 <ul class="ul_destinos">
-                    <li class="destinos" style="margin-left: 50px;"><a href="#">Fotografía</a></li>
+                    <li class="destinos destinos-Izq"><a href="#">Fotografía</a></li>
                     <li class="destinos"><a href="#">Opiniones</a></li>
                     <li class="destinos"><a href="#">Restaurantes</a></li>
-                    <li class="destinos" style="margin-right: 50px;"><a href="#">Aventura</a></li>
+                    <li class="destinos destinos-Der"><a href="#">Aventura</a></li>
                 </ul>
             </nav>
 
@@ -187,7 +250,7 @@
                 <!--Unordered List-->
                 <ul class="ul">
                     <!--Items-->
-                    <li id="logoItem"><img src="images/TurismoImagen.webp" alt="Turismo EC Logo" id="logoImg"></li> 
+                    <li id="logoItem"><img src="images/TurismoImagen.webp" alt="Turismo EC Logo" class="logoImg"></li> 
                     <li class="item"><a href="">Destacado</a></li>
                     <li class="item"><a href="">Regiones</a></li>
                     <li class="item"><a href="">Playas</a></li>
@@ -214,13 +277,22 @@
     <!-- Scripts -->
     <script>
         var username = localStorage.getItem('username');
-
+        let messages = document.getElementsByClassName('welcomeMessage'); 
         if (username) {
-            document.getElementById('welcomeMessage').textContent = username;
+            for(let i = 0; i < messages.length; i++){
+                messages[i].textContent = username;
+            }
         } else {
-            document.getElementById('welcomeMessage').textContent = 'No se ha encontrado información de inicio de sesión.';
+            for(let i = 0; i < messages.length; i++){
+                messages[i].textContent = 'Sin iniciar sesión';
+            }
         }
     </script>
+
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    
+    <script src="JS/script.js"></script> 
+
 </body>
     
 

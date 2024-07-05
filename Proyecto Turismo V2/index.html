@@ -8,13 +8,12 @@
 </head>
 <body>
     <!-- Diseño del formulario -->
-    <form form id="loginForm" action="Formularios/registro.html" method="get">
+    <form action="loginform" method="get">
         <div class="login_container">
-            <h2 id="Titulo"> REGISTRO </h2>
             <div class="form_group_nombres">
                 <div class="box">
                     <label for="nombre"><b>Nombre</b></label>
-                    <input type="text" name="nombre" class="input_box" id="nombre_1" pattern="[A-Za-zÀ-ÿ\s]{4,20}" 
+                    <input type="text" name="nombre" class="input_box" pattern="[A-Za-zÀ-ÿ\s]{4,20}" 
                     title="El nombre solo puede contener letras y espacios, máximo 20 caracteres" required>
                 </div>
             
@@ -270,20 +269,5 @@
         });
         
     </script>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-            var username = document.getElementById('nombre_1').value;
-
-            var users = JSON.parse(localStorage.getItem('users')) || [];
-
-            localStorage.setItem('username', username);
-
-            window.location.href = 'Formularios/registro.html';
-        });
-    </script>
-
 </body>
 </html>

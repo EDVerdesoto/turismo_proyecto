@@ -3,61 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Login</title>
+    <title> Formulario de Login </title>
     <link rel="stylesheet" href="CSS/styles.css">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body>
-    <div class="login_container">
-        <h2 class="mensaje_bienvenida">Bienvenido</h2>
-        <p>Inicie sesión, por favor</p>
 
+<form action="/submit-form" method="post"></form>
+<body>
+    
+    <!-- Diseño del fomrulario -->
+    <div class="login_container">
+        <h2 class="mensaje_bienvenida"> Bienvenido </h2>
+        <p> Inicie sesión, por favor </p>
+
+        <!-- Formulario -->
         <form id="loginForm" action="#" method="get">
-            <div class="form_group">
-                <label for="username"><b>Username</b></label>
+            
+            <div class="form_gruop">
+                <label for="username"> <b>Username</b> </label>
                 <input type="text" name="username" id="username" pattern="^(?=.{1,9}$)[A-Z][a-z0-9]*([._](?![._])\w*)?$" 
                 placeholder="Username" required>
                 <div id="usernameFeedback"></div>
             </div>
             
-            <div class="form_group">
-                <label for="password"><b>Password</b></label>
+            <div class="form_gruop">
+                <label for="password"> <b>Password</b> </label>
                 <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}" 
                 placeholder="Password" required>
                 <div id="passwordFeedback"></div>
             </div>
 
             <div class="form_option">
-                <label><input type="checkbox" name="remember"> Recordar usuario</label>
-                <a href="#" class="forgot_password">Olvidé mi contraseña</a>
+                <label> <input type="checkbox" name="remember"> Recordar usuario </label>
+                <a href="#" class="forgot_paswword" > Olvide mi contraseña </a>
             </div>
-            <button type="submit" id="btn_login">INICIAR SESIÓN</button>
-            <button type="button" id="btn_register">REGISTRARSE</button>
+            <button type="submit" class="btn_login" > INICIAR SESIÓN </button>
+            <button type="button" id="btn_register"> REGISTRARSE </button>
         </form>
 
         <p>Otras formas de hacer login</p>
         <div class="social_button">
             <a href="https://accounts.google.com/o/oauth2/auth" class="btn_google" id="customGoogleBtn"
-            data-client_id="494798499254-hv3mvir1h224llf9k5jbg4i3ke5m1dn5.apps.googleusercontent.com">GOOGLE</a>
+            data-client_id="494798499254-hv3mvir1h224llf9k5jbg4i3ke5m1dn5.apps.googleusercontent.com"
+            >GOOGLE</a>
             <a href="#" class="btn_facebook">FACEBOOK</a>
             <a href="#" class="btn_twitter">TWITTER</a>
         </div>
     </div>
 
     <!-- Scripts -->
+    <!-- Script para guardar la ingormacion en una nueva pagina -->
     <script>
-        // Redirigir al registro
-        document.getElementById('btn_register').addEventListener("click", function() {
-            window.location.href = '../index.html';
-        });
+            const btn_register = document.getElementById('btn_register');
+            btn_register.addEventListener("click",  function(){
+                window.location.href = '../index.html';
+            });
+    </script>
 
-        // Validación de username
+    <!-- Script para abrir la pagina principal -->
+    <script>
+        const btn_login = document.getElementById('btn_login');
+        btn_login.addEventListener("click",  function(){
+            window.location.href = '../pag_principal_html';
+        });
+    </script>
+
+    <!-- Script para mensaje de advertencia usuario -->
+    <script>
         var usernameInput = document.getElementById("username");
         var usernameFeedback = document.getElementById("usernameFeedback");
-
+    
         usernameInput.addEventListener("input", function() {
             var username = usernameInput.value.trim();
-
+    
             if (username.length > 9) {
                 usernameFeedback.textContent = "Máximo 9 caracteres permitidos.";
                 return;
@@ -75,8 +93,10 @@
 
             usernameFeedback.textContent = "";
         });
+    </script>
 
-        // Validación de password
+    <!-- Script para mensaje de advertencia contraseña -->
+    <script>
         var passwordInput = document.getElementById("password");
         var passwordFeedback = document.getElementById("passwordFeedback");
 
@@ -84,36 +104,23 @@
             var password = passwordInput.value.trim();
 
             if (password.length > 10 || password.length < 6) {
-                passwordFeedback.textContent = "Escoja una contraseña entre 6 y 10 caracteres.";
+                passwordFeedback.textContent = "Escoja una contraseña entre 6 y 10 caracteres";
                 return;
             }
 
             if (!/(?=.*\d)/.test(password)) {
-                passwordFeedback.textContent = "La contraseña debe tener al menos un número.";
+                passwordFeedback.textContent = "La contraseña debe tener al menos un número";
                 return;
             }
 
             if (!/(?=.*[A-Z])/.test(password)) {
-                passwordFeedback.textContent = "La contraseña debe tener al menos una mayúscula."; 
+                passwordFeedback.textContent = "La contraseña debe tener al menos una mayúscula"; 
                 return;
             }
 
             passwordFeedback.textContent = "";
         });
-
-        // Manejo del formulario de login
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            var users = JSON.parse(localStorage.getItem('users')) || [];
-
-            localStorage.setItem('username', username);
-
-            window.location.href = '../Turismo/pag_principal.html';
-        });
     </script>
+
 </body>
 </html>
