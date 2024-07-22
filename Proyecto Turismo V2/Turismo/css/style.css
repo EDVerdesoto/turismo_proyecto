@@ -15,6 +15,8 @@ body{
     background-color: hsl(183, 40%, 72%);
     border-bottom: 2px solid #fff;
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 #nav{
@@ -23,6 +25,8 @@ body{
     padding: 15px 30px;
     display: flex;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
 }
 
 .leftNav{
@@ -35,6 +39,7 @@ body{
     width: 55%;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .ul{
@@ -65,7 +70,7 @@ body{
 }
 
 
-#mainHeader a, .welcomeMessage{  
+#mainHeader a{  
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
@@ -98,11 +103,13 @@ body{
     width: 50%;
     background-color: transparent;
     height: 30px;
+    margin-right: 60px;
 }
 
 .icon-container{
     width: 9%;
     height: 100%;
+    margin-right: 6%;
 }
 
 .text-area{
@@ -561,4 +568,99 @@ body{
     .destinos-Izq, .destinos-Der{
         margin: 0;
     }
+}
+
+/* Menú desplegable */
+
+#pfp_container {
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    width: 52px;
+    background-color:     hsl(183, 40%, 72%);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    margin-left: 1vh;
+    position: absolute;
+    border-radius: 20px;
+}
+
+#pfp_container:hover {
+    width: 30vh;
+    height: 42vh;
+    border: 2px solid black;
+    background-color: hsl(183, 32%, 42%);
+    position: absolute;
+    transform: translateY(122px);
+}
+
+#pfp_container #user_info {
+    display: flex;
+    justify-content: right;
+    color: white;
+    font-size: 18px;
+    height: 160px;
+    transition: all 0.5s ease;
+}
+
+#pfp_container:hover #user_info {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+#pfp_container #user_info img {
+    margin: 0;
+    border-radius: 50%;
+    max-width: 52px;
+    transition: max-width 0.5s ease, padding 0.5s ease;
+}
+
+#pfp_container:hover #user_info img {
+    max-width: 30vh;
+    padding: 10px;
+}
+
+
+#pfp_container #user_info .welcomeMessage {
+    display: none;
+    overflow: hidden;
+    max-width: 0;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+}
+
+#pfp_container:hover #user_info .welcomeMessage {
+    display: block;
+    max-width: 30vh;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+
+#pfp_container #links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 400px;
+    transition: all 0.5s ease;
+}
+
+#pfp_container #links a:hover {
+    background-color: aqua;
+    color: black;
+}
+
+
+#pfp_container.open .hidden {
+    display: block;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

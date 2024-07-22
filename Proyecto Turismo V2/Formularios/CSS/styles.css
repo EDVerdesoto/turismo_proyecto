@@ -57,7 +57,7 @@ body {
     color: #680eac;
 }
 
-.btn_login {
+#btn_login {
     background-color: black;
     color: #fff;
     border-radius: 8px;
